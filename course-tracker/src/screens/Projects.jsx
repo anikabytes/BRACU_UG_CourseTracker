@@ -2,14 +2,11 @@ import React from 'react';
 
 const Projects = () => {
   const projects = [
-
-    
     {
       title: "Tic Tac Toe",
       course: "CSE341",
       link: "https://github.com/anikabytes/BRACU_CSE341_TicTacToe"
     },
-
     {
       title: "Music Streaming Service",
       course: "CSE370",
@@ -30,16 +27,15 @@ const Projects = () => {
       course: "CSE470",
       link: "https://github.com/anikabytes/CSE470_DIY_Design_And_Collaboration_Website"
     },
-
   ];
 
   const handleBoxClick = (link) => {
-    window.location.href = link;
+    window.open(link, '_blank'); // Open link in a new tab
   };
 
   return (
     <div className="min-h-screen bg-slate-900 bg-opacity-35 text-white flex flex-col justify-center items-center">
-      <div className="w-full max-w-5xl   m-5 sm:m-20 p-5">
+      <div className="w-full max-w-5xl m-5 sm:m-20 p-5">
         <div className="grid justify-items-center m-5 md:m-10">
           <h1 className="animate-pulse text-7xl text-orange-400 mt-10 font-serif font-extrabold">PROJECTS</h1>
         </div>
@@ -53,10 +49,10 @@ const Projects = () => {
             >
               <div className="p-5 text-center">
                 <div className="uppercase tracking-wide text-lg font-semibold text-orange-400 font-serif">
-                  <a href={project.link}>{project.title}</a>
+                  {project.title}
                 </div>
               </div>
-              <div className="text-center text-yellow-200 font-mono" > {project.course} </div>
+              <div className="text-center text-yellow-200 font-mono">{project.course}</div>
             </div>
           ))}
         </div>

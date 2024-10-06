@@ -168,13 +168,13 @@ const Courses = () => {
     },
   ];
 
-  const handleBoxClick = (courses) => {
-    if (courses.done === "no") {
+  const handleBoxClick = (course) => {
+    if (course.done === "no") {
       setMessage("Course Not Done");
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       setMessage('');
-      window.location.href = courses.link;
+      window.open(course.link, '_blank'); // Open course link in a new tab
     }
   };
 
@@ -186,7 +186,7 @@ const Courses = () => {
         </div>
 
         {message && (
-          <div className="text-center  text-red-500 mb-4">
+          <div className="text-center text-red-500 mb-4">
             {message}
           </div>
         )}
@@ -206,9 +206,7 @@ const Courses = () => {
               >
                 <div className={`p-8 text-center ${textColor}`}>
                   <div className="uppercase tracking-wide text-lg font-semibold">
-                    <a href={course.link} className={textColor} onClick={(e) => { if (!isDone) e.preventDefault(); }}>
-                      {course.title}
-                    </a>
+                    {course.title}
                   </div>
                   <div className={`mt-2 text-sm text-yellow-200 font-mono`}>{course.semester}</div>
                 </div>
