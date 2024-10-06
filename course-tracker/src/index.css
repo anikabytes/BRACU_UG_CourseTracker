@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: rgba(13, 9, 64, 0.925); /* Track color */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: rgba(14, 215, 215, 0.8); /* Thumb color */
+  border-radius: 10px; /* Round edges */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(14, 215, 215, 0.995); /* Thumb color on hover */
+}
+
+/* For Firefox */
+.scrollbar-custom {
+  scrollbar-width: thin; /* Options: auto, thin */
+  scrollbar-color: rgba(14, 215, 215, 0.995) rgba(255, 255, 255, 0.2); /* Thumb color and track color */
+}
+
