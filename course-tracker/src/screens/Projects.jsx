@@ -27,6 +27,11 @@ const Projects = () => {
       course: "CSE470",
       link: "https://github.com/anikabytes/CSE470_DIY_Design_And_Collaboration_Website"
     },
+    {
+    title: "Portolio",
+    course: "CSE470",
+    link: "https://anikabytes.github.io/Portfolio"
+  },
   ];
 
   const handleBoxClick = (link) => {
