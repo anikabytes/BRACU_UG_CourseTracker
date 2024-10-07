@@ -186,7 +186,7 @@ const Courses = () => {
           <h1 className="animate-pulse text-7xl text-fuchsia-200 mt-10 font-serif font-extrabold">COURSE TRACKER</h1>
           
             <p className="font-mono text-sm text-yellow-50 inline-block bg-violet-200 bg-opacity-35 px-3 ">
-               CSE320, CSE470, CSE360 & CSE421 contents are yet to be uploaded more 
+               CSE320, CSE470, CSE360 & CSE421 contents are yet to be uploaded 
             </p>
           
         </div>

@@ -1,4 +1,4 @@
-import githubIcon from "../assets/github.jpg";
+
 
 const Navbar = () => {
   const spreadsheetLink = "https://docs.google.com/spreadsheets/d/14fWQqjFVNla1bhUlqJ5OVp72tKqxM2WPzxnc4RqdMss/edit?usp=sharing"; 
@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <div className=" w-full flex justify-between items-center p-5 ">
-      {/* GitHub Logo */}
+      
       <a
         href={githubLink}
         target="_blank"
