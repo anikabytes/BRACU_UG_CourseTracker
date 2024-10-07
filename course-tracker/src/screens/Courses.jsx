@@ -171,37 +171,47 @@ const Courses = () => {
   const handleBoxClick = (course) => {
     if (course.done === "no") {
       setMessage("Course Not Done");
+      
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       setMessage('');
-      window.open(course.link, '_blank'); // Open course link in a new tab
+      window.open(course.link, '_blank'); 
     }
   };
 
   return (
     <div className="min-h-screen bg-opacity-35 text-white flex flex-col justify-center items-center">
-      <div className="w-full max-w-5xl m-5 sm:m-20 p-5">
+      <div className="w-full max-w-5xl m-5 sm:m-20 ">
         <div className="grid justify-items-center m-5 md:m-10">
-          <h1 className="animate-pulse text-7xl text-cyan-300 mt-10 font-serif font-extrabold">COURSE TRACKER</h1>
+          <h1 className="animate-pulse text-7xl text-fuchsia-200 mt-10 font-serif font-extrabold">COURSE TRACKER</h1>
+          
+            <p className="font-mono text-sm text-yellow-50 inline-block bg-violet-200 bg-opacity-35 px-3 ">
+               CSE320, CSE470, CSE360 & CSE421 contents are yet to be uploaded more 
+            </p>
+          
         </div>
 
+
         {message && (
-          <div className="text-center text-red-500 mb-4">
-            {message}
+          <div className="flex justify-center"> 
+            <div className="font-mono text-center inline-block bg-sky-300 bg-opacity-25 p-1 text-red mb-4 px-2">
+              {message}
+            </div>
           </div>
         )}
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-3 p-5">
           {courses.map((course, index) => {
             const isDone = course.done === "yes";
-            const textColor = isDone ? 'text-blue-500' : 'text-red-500';
-            const shadowColor = isDone ? 'shadow-blue-800' : 'shadow-red-800';
+            const textColor = isDone ? 'text-sky-300' : 'text-red-300';
+            const shadowColor = isDone ? 'shadow-blue-300' : 'shadow-red-300';
+            const bgColor =isDone ? 'bg-sky-800':'bg-red-800';
             const hover = isDone ? 'hover:animate-pulse' : '';
 
             return (
               <div
                 key={index}
-                className={`w-full rounded-xl shadow-md overflow-hidden cursor-pointer ${hover} ${shadowColor}`}
+                className={`w-full rounded-xl shadow-md overflow-hidden cursor-pointer bg-opacity-35 ${hover} ${shadowColor} ${bgColor}`}
                 onClick={() => handleBoxClick(course)}
               >
                 <div className={`p-8 text-center ${textColor}`}>

@@ -5,7 +5,7 @@ const Navbar = () => {
   const githubLink = "https://github.com/anikabytes"; 
 
   return (
-    <div className="bg-slate-900 w-full flex justify-between items-center p-5 shadow-md">
+    <div className=" w-full flex justify-between items-center p-5 ">
       {/* GitHub Logo */}
       <a
         href={githubLink}
@@ -13,14 +13,14 @@ const Navbar = () => {
         rel="noopener noreferrer"
         className="flex items-center"
       >
-        <span className="text-violet-300 font-bold py-2 px-4 rounded hover:underline underline-offset-2 hover:underline-white hover:text-white">GitHub</span>
+        <span className="text-violet-300 font-bold py-2 px-4 rounded hover:underline underline-offset-2 hover:underline-slate-400 hover:text-slate-400">GitHub</span>
       </a>
 
       <a
         href={spreadsheetLink}
         target="_blank"
         rel="noopener noreferrer"
-        className=" text-violet-300 font-bold py-2 px-4 rounded hover:underline underline-offset-2 hover:underline-white hover:text-white"
+        className=" text-violet-300 font-bold py-2 px-4 rounded hover:underline underline-offset-2 hover:underline-slate-400 hover:text-slate-400"
       >
         UG Courses 
       </a>

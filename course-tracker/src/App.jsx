@@ -1,20 +1,30 @@
+import React from 'react';
 import Courses from "./screens/Courses";
-import Projects from "./screens/Projects";
 import Navbar from "./components/Navbar";
+import backgroundVideo from './assets/bg2.mp4'; // Import the video
 
 const App = () => {
-  
-
   return (
-    <div className="bg-slate-900 w-full h-screen overflow-auto scrollbar-custom">
-      <Navbar />
-     <Courses />
+    <div className="relative w-full min-h-screen overflow-auto scrollbar-custom">
+      
+      {/* Background video */}
+      <video 
+        autoPlay 
+        loop 
+        muted 
+        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+      >
+        <source src={backgroundVideo} type="video/mp4" />
+      </video>
 
-     <Projects />
+      {/* Content overlay */}
+      <div className="relative z-10 min-h-screen">
+        <Navbar />
+        <Courses />
+      </div>
     </div>
   );
 };
 
 export default App;
-
 
