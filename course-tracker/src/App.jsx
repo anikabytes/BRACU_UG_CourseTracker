@@ -2,7 +2,7 @@ import React from 'react';
 import Courses from "./screens/Courses";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import backgroundVideo from './assets/bg3.mp4'; 
+import backgroundVideo from './assets/bg4.mp4'; 
 
 const App = () => {
   return (
