@@ -228,12 +228,14 @@ const Courses = () => {
           {courses.map((course, index) => {
             const isDone = course.done === "yes";
             const notUpdated = course.updated === "no";
-            const textColorPrev = isDone ? 'text-sky-300' : 'text-red-300';
+            const textColorPrev = isDone ? 'text-green-300' : 'text-red-300';
             const textColor = notUpdated ? 'text-yellow-300' : textColorPrev;
-            const shadowColorPrev = isDone ? 'shadow-blue-300' : 'shadow-red-300';
+            const borderColorPrev = isDone ? 'border-green-300' : 'border-red-300';
+            const borderColor = notUpdated ? 'border-yellow-300' : borderColorPrev;
+            const shadowColorPrev = isDone ? 'shadow-green-300' : 'shadow-red-300';
             const shadowColor = notUpdated ? 'shadow-yellow-300' : shadowColorPrev;
-            const bgColorPrev =isDone ? 'bg-sky-800':'bg-red-800';
-            const bgColor = notUpdated ? 'bg-yellow-500' : bgColorPrev;
+            const bgColorPrev =isDone ? 'bg-green-300':'bg-red-300';
+            const bgColor = notUpdated ? 'bg-yellow-300' : bgColorPrev;
             const hover = (isDone && !notUpdated) ? 'hover:animate-pulse' : '';
 
 
