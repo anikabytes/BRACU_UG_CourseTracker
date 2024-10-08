@@ -1,6 +1,7 @@
 import React from 'react';
 import Courses from "./screens/Courses";
 import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
 import backgroundVideo from './assets/bg4.mp4'; 
 
@@ -19,6 +20,7 @@ const App = () => {
 
         <div className="relative z-10 min-h-screen ">
           <Navbar />
+          <Header />
           <Courses />
           <Footer />
         </div>
