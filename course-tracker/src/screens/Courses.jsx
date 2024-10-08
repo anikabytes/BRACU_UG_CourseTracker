@@ -198,11 +198,11 @@ const Courses = () => {
 
   const handleBoxClick = (course) => {
     if (course.done === "no" ) {
-      setMessage("Course Not Done");
+      setMessage("Course Not Done !!!");
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } 
     else if (course.updated === "no"){
-      setMessage("No content Uplaoded");
+      setMessage("No content Uplaoded :(");
       window.scrollTo({top:0,behaviour:'smooth'});
     }else {
       setMessage('');
@@ -218,7 +218,7 @@ const Courses = () => {
 
         {message && (
           <div className="flex justify-center"> 
-            <div className="font-mono text-center inline-block bg-sky-300 bg-opacity-25 p-1 text-red mb-4 px-2">
+            <div className="font-mono text-center inline-block bg-headerNote-300  bg-opacity-100 p-1 text-coffee-200 mb-4 px-2">
               {message}
             </div>
           </div>
@@ -228,28 +228,28 @@ const Courses = () => {
           {courses.map((course, index) => {
             const isDone = course.done === "yes";
             const notUpdated = course.updated === "no";
-            const textColorPrev = isDone ? 'text-green-300' : 'text-red-300';
-            const textColor = notUpdated ? 'text-yellow-300' : textColorPrev;
-            const borderColorPrev = isDone ? 'border-green-300' : 'border-red-300';
-            const borderColor = notUpdated ? 'border-yellow-300' : borderColorPrev;
-            const shadowColorPrev = isDone ? 'shadow-green-300' : 'shadow-red-300';
-            const shadowColor = notUpdated ? 'shadow-yellow-300' : shadowColorPrev;
-            const bgColorPrev =isDone ? 'bg-green-300':'bg-red-300';
-            const bgColor = notUpdated ? 'bg-yellow-300' : bgColorPrev;
+            const textColorPrev = isDone ? 'text-greeny-900' : 'text-reddish-900';
+            const textColor = notUpdated ? 'text-yellowish-900' : textColorPrev;
+            const borderColorPrev = isDone ? 'border-greeny-300' : 'border-reddish-300 ';
+            const borderColor = notUpdated ? 'border-yellowish-300' : borderColorPrev;
+            const shadowColorPrev = isDone ? 'shadow-greeny-300' : 'shadow-reddish-300';
+            const shadowColor = notUpdated ? 'shadow-yellowish-300' : shadowColorPrev;
+            const bgColorPrev =isDone ? 'bg-greeny-500 ':'bg-reddish-500';
+            const bgColor = notUpdated ? 'bg-yellowish-500' : bgColorPrev;
             const hover = (isDone && !notUpdated) ? 'hover:animate-pulse' : '';
 
 
             return (
               <div
                 key={index}
-                className={`w-full rounded-xl shadow-md overflow-hidden cursor-pointer bg-opacity-35 ${hover} ${shadowColor} ${bgColor}`}
+                className={`w-full rounded-xl shadow-md overflow-hidden cursor-pointer bg-opacity-100 ${hover} ${borderColor} ${bgColor}`}
                 onClick={() => handleBoxClick(course)}
               >
-                <div className={`p-8 text-center ${textColor}`}>
-                  <div className="uppercase tracking-wide text-lg font-semibold">
+                <div className={`p-8 text-center   ${textColor}`}>
+                  <div className="uppercase tracking-wide font-bold font-serif text-2xl">
                     {course.title}
                   </div>
-                  <div className={`mt-2 text-sm text-yellow-200 font-mono`}>{course.semester}</div>
+                  <div className={`mt-2 text-sm text-coffee-950 font-mono`}>{course.semester}</div>
                 </div>
               </div>
             );

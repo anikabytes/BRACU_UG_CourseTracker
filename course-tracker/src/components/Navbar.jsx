@@ -13,14 +13,14 @@ const Navbar = () => {
         rel="noopener noreferrer"
         className="flex items-center"
       >
-        <span className="text-violet-300 font-bold py-2 px-4 rounded hover:underline underline-offset-2 hover:underline-slate-400 hover:text-slate-400">GitHub</span>
+        <span className="text-coffee-200 font-bold py-2 px-4 rounded hover:underline underline-offset-2 hover:underline-choco-700 hover:text-choco-700">GitHub</span>
       </a>
 
       <a
         href={spreadsheetLink}
         target="_blank"
         rel="noopener noreferrer"
-        className=" text-violet-300 font-bold py-2 px-4 rounded hover:underline underline-offset-2 hover:underline-slate-400 hover:text-slate-400"
+        className=" text-coffee-200 font-bold py-2 px-4 rounded hover:underline underline-offset-2 hover:underline-choco-700 hover:text-choco-700"
       >
         UG Courses 
       </a>
