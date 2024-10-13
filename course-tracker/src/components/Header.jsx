@@ -31,9 +31,9 @@ const Header = () => {
             onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the content
           >
             <p className="text-choco-550 font-mono font-medium">
-              The content for
-              <b className="text-coffee-900"> CSE320, CSE470, CSE360, and CSE421 </b>
-              is currently being updated and will be uploaded soon. Stay tuned!
+              
+               <b className="text-coffee-900"> Hand Notes will be uploaded gradually </b> 
+             
             </p>
 
             <p className="text-choco-550 font-mono font-medium mt-4">
@@ -41,7 +41,7 @@ const Header = () => {
             </p>
 
             <p className="text-headerNote-300 font-extrabold font-mono  mt-4">
-              *** UI will be further updated ***
+              *** UI will be updated further !!! ***
             </p>
 
           </div>

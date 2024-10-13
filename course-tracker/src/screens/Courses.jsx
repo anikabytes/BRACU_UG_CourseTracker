@@ -65,7 +65,7 @@ const Courses = () => {
       title: "CSE320",
       link: "https://github.com/anikabytes/BRACU_CSE320_Data_Communications",
       done: "yes",
-      updated: "no",
+      updated: "yes",
       semester: "Spring'24"
     },
     {
@@ -114,7 +114,7 @@ const Courses = () => {
       title: "CSE360",
       link: "https://github.com/anikabytes/BRACU_CSE360_Computer_Interfacing",
       done: "yes",
-      updated: "no",
+      updated: "yes",
       semester: "Summer'24"
     },
     {
@@ -135,7 +135,7 @@ const Courses = () => {
       title: "CSE421",
       link: "https://github.com/anikabytes/BRACU_CSE421_Computer_Networks",
       done: "yes",
-      updated: "no",
+      updated: "yes",
       semester: "Summer'24"
     },
     {
@@ -184,7 +184,7 @@ const Courses = () => {
       title: "CSE470",
       link: "https://github.com/anikabytes/BRACU_CSE470_Software_Engineering",
       done: "yes",
-      updated: "no",
+      updated: "yes",
       semester: "Spring'24"
     },
     {
@@ -236,13 +236,13 @@ const Courses = () => {
             const shadowColor = notUpdated ? 'shadow-yellowish-300' : shadowColorPrev;
             const bgColorPrev =isDone ? 'bg-greeny-500 ':'bg-reddish-500';
             const bgColor = notUpdated ? 'bg-yellowish-500' : bgColorPrev;
-            const hover = (isDone && !notUpdated) ? 'hover:animate-pulse' : '';
+            //const hover = (isDone && !notUpdated) ? 'hover:animate-pulse' : '';
 
 
             return (
               <div
                 key={index}
-                className={`w-full rounded-xl shadow-md overflow-hidden cursor-pointer bg-opacity-100 ${hover} ${borderColor} ${bgColor}`}
+                className={`w-full rounded-xl shadow-md overflow-hidden cursor-pointer bg-opacity-100 hover:animate-pulse ${borderColor} ${bgColor}`}
                 onClick={() => handleBoxClick(course)}
               >
                 <div className={`p-8 text-center   ${textColor}`}>
