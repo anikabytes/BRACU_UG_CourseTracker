@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Navbar from '../components/Navbar';
 
 const Courses = () => {
   const [message, setMessage] = useState('');
@@ -213,9 +214,12 @@ const Courses = () => {
 
 
   return (
-    <div className="min-h-screen bg-opacity-35 text-white flex flex-col justify-center items-center">
-      <div className="w-full max-w-5xl m-5 sm:m-20 ">
-
+    
+    <div className="min-h-screen w-full bg-opacity-35 text-white flex flex-col justify-center items-center">
+      
+      
+      <div className="w-full max-w-5xl m-5 ">
+        
         {message && (
           <div className="flex justify-center"> 
             <div className="font-mono text-center inline-block bg-headerNote-300  bg-opacity-100 p-1 text-coffee-200 mb-4 px-2">

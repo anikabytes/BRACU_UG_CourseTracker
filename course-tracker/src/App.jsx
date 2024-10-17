@@ -40,32 +40,50 @@
 
 
 
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useState } from 'react'; // Import useState
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Courses from './screens/Courses';
 import HandNotes from './screens/HandNotes';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 const App = () => {
-  return (
+  const location = useLocation(); // Get the current location
+  const [searchTerm, setSearchTerm] = useState('');
 
-    <Router>
-      <div className="relative bg-coffee-950 w-full min-h-screen overflow-auto  scrollbar-custom">
-        <Navbar />
-        <Header />
-        <Routes>
-          {/* Default route for Courses */}
-          <Route path="/" element={<Courses />} />
-          {/* HandNotes route */}
-          <Route path="/handnotes" element={<HandNotes />} />
-          {/* Fallback route to handle any invalid paths */}
-          <Route path="*" element={<Courses />} />
-          
-        </Routes>
-      </div>
-    </Router>
+  // Handle search term from Navbar
+  const handleSearch = (term) => {
+    setSearchTerm(term);
+  };
+
+  return (
+    <div className="relative bg-coffee-950 w-full min-h-screen overflow-auto scrollbar-custom">
+      {/* Render Navbar once */}
+      <Navbar goToHandNotes={() => {}} onSearch={handleSearch} />
+
+      {/* Conditionally render Header based on the path */}
+      {location.pathname !== '/handnotes' && <Header />}
+
+      <Routes>
+        {/* Default route for Courses */}
+        <Route path="/" element={<Courses />} />
+        {/* HandNotes route */}
+        <Route path="/handnotes" element={<HandNotes />} />
+        {/* Fallback route to handle any invalid paths */}
+        <Route path="*" element={<Courses  />} />
+      </Routes>
+
+      <Footer />
+    </div>
   );
 };
 
-export default App;
+// Main component that wraps App with Router
+const WrappedApp = () => (
+  <Router>
+    <App />
+  </Router>
+);
+
+export default WrappedApp;
