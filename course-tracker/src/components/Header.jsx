@@ -62,6 +62,7 @@ import { useNavigate } from 'react-router-dom'; // Import useNavigate
 const Header = () => {
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
   const navigate = useNavigate(); // Initialize useNavigate
+  const spreadsheetLink = "https://docs.google.com/spreadsheets/d/14fWQqjFVNla1bhUlqJ5OVp72tKqxM2WPzxnc4RqdMss/edit?usp=sharing"; 
 
   const toggleOverlay = () => {
     setIsOverlayVisible(!isOverlayVisible);
@@ -84,6 +85,8 @@ const Header = () => {
       >
         Note from Creator
       </button>
+
+
 
       {/* Button to navigate to HandNotes page */}
       {/* <button
@@ -114,6 +117,16 @@ const Header = () => {
             <p className="text-headerNote-300 font-extrabold font-mono mt-4">
               *** UI will be updated further !!! ***
             </p>
+
+                    {/* Link to UG Courses */}
+          <a
+          href={spreadsheetLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-emerald-700 font-bold py-2 px-4 rounded underline underline-offset-2 underline-choco-700 hover:text-emerald-950"
+        >
+          UG Courses
+        </a>
           </div>
         </div>
       )}
