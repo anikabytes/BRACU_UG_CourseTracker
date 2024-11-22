@@ -115,7 +115,7 @@ const Header = () => {
             </p>
 
             <p className="text-headerNote-300 font-extrabold font-mono mt-4">
-              *** UI will be updated further !!! ***
+              *** CSE340,CSE428,CSE460 notes will be uploaded throughout the semester gradually. ***
             </p>
 
                     {/* Link to UG Courses */}

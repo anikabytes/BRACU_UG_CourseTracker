@@ -79,8 +79,8 @@ const HandNotes = () => {
     },
     {
       title: "CSE340",
-      link: "",
-      updated: "no",
+      link: "https://drive.google.com/drive/folders/1_rDn4XnccJP89bVgLtcftWSHcODClsWq?usp=drive_link",
+      updated: "yes",
       semester: "Fall'24"
     },
     {
@@ -139,14 +139,14 @@ const HandNotes = () => {
     },
     {
       title: "CSE428",
-      link: "",
-      updated: "no",
+      link: "https://drive.google.com/drive/folders/1Bomnq0--fMK4bMNyxDeDxym8BUgAni--?usp=drive_link",
+      updated: "yes",
       semester: "Fall'24"
     },
     {
       title: "CSE460",
-      link: "",
-      updated: "no",
+      link: "https://drive.google.com/drive/folders/1PKCfN6e7gw-1J6chvamKIgj8DlICY7e5?usp=drive_link",
+      updated: "yes",
       semester: "Fall'24"
     },
     {
@@ -170,10 +170,7 @@ const HandNotes = () => {
   ];
 
   const handleNoteClick = (note) => {
-    if (!note.link) {
-      setMessage("No hand notes available for this course.");
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
+    if (note.link) {
       setMessage('');
       window.open(note.link, '_blank'); 
     }
